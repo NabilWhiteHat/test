@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">POMEN SoT</string>
+    <string name="select">Select Category</string>
+    <string name="about">About</string>
     <string name="tab_text_1">Electrical</string>
     <string name="tab_text_2">Piping</string>
     <string name="tab_text_3">Car Service</string>
