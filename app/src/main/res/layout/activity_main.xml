@@ -44,6 +44,7 @@
             android:layout_height="63dp"
             android:background="#FBFBFB"
             app:tabIndicatorColor="#E91E63"
+            app:tabPadding="15dp"
             app:tabRippleColor="#FFFFFF"
             app:tabTextColor="#6C6C6C" />
     </com.google.android.material.appbar.AppBarLayout>
