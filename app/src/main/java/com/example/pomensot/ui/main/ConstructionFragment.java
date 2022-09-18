@@ -7,7 +7,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
+import com.example.pomensot.CustomAdapter;
 import com.example.pomensot.R;
 
 /**
@@ -17,14 +19,10 @@ import com.example.pomensot.R;
  */
 public class ConstructionFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    public View view;
+    ListView simpleList;
+    String countryList[] = {"Elshaikh", "Nabil", "AbdulRahman", "Aisyah", "Ang", "NewZealand"};
+    int flags[] = {R.drawable.user, R.drawable.profile, R.drawable.user, R.drawable.profile, R.drawable.user, R.drawable.profile};
 
     public ConstructionFragment() {
         // Required empty public constructor
@@ -47,9 +45,8 @@ public class ConstructionFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
 
@@ -57,6 +54,10 @@ public class ConstructionFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_construction, container, false);
+        view = inflater.inflate(R.layout.fragment_construction, container, false);
+        simpleList = view.findViewById(R.id.simpleListView);
+        CustomAdapter customAdapter = new CustomAdapter(getContext().getApplicationContext(), countryList, flags);
+        simpleList.setAdapter(customAdapter);
+        return view;//inflater.inflate(R.layout.fragment_electrical, container, false);
     }
 }
