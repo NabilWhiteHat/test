@@ -47,9 +47,10 @@
                 android:backgroundTint="@color/white"
                 android:paddingTop="30sp"
                 android:scaleType="centerInside"
-                android:src="@drawable/user"
+                android:background="@drawable/user"
                 tools:ignore="SpeakableTextPresentCheck"
-                tools:src="@drawable/user" />
+                 />
+
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <Spinner

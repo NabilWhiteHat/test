@@ -1,6 +1,7 @@
 package com.example.pomensot;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -14,6 +15,9 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.pomensot.R.id;
+import com.example.pomensot.databinding.ActivityMainBinding;
+import com.example.pomensot.ui.main.SectionsPagerAdapter;
+import com.google.android.material.tabs.TabLayout;
 
 public class Layout1 extends AppCompatActivity {
 
@@ -25,6 +29,8 @@ public class Layout1 extends AppCompatActivity {
     AutoCompleteTextView autoCompleteTxt;
 
     ArrayAdapter<String> adapterItems;
+
+
 
 
     @SuppressLint({"MissingInflatedId", "WrongViewCast"})
@@ -40,7 +46,6 @@ public class Layout1 extends AppCompatActivity {
 
 
         // intent page
-
         ImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,6 +55,8 @@ public class Layout1 extends AppCompatActivity {
 
             }
         });
+
+
 
 
         // part for dropdown item

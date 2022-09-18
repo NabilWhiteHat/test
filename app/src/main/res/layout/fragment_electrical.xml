@@ -6,11 +6,114 @@
     tools:context=".ui.main.ElectricalFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Electrical Fragment Changed fadl"
-        android:textColor="@color/black"
-        android:textSize="44sp" />
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Electrical Fragment Changed fadl"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <Button
+                android:text="button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn1" >
+            </Button>
+
+            <Button
+                android:text="button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn2" >
+            </Button>
+            <Button
+                android:text="button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn3" >
+            </Button>
+            <Button
+                android:text="button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn4" >
+            </Button>
+            <Button
+                android:text="button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn5" >
+            </Button>
+            <Button
+                android:text="button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn6" >
+            </Button>
+            <Button
+                android:text="button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn7" >
+            </Button>
+            <Button
+                android:text="button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn8" >
+            </Button>
+            <Button
+                android:text="button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn9" >
+            </Button>
+            <Button
+                android:text="button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn10" >
+            </Button>
+            <Button
+                android:text="button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn11" >
+            </Button>
+            <Button
+                android:text="button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn12" >
+            </Button>
+
+            <Button
+                android:text="button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn13" >
+            </Button>
+            <Button
+                android:text="button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn14" >
+            </Button>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </FrameLayout>

@@ -4,29 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FAFAFA"
     tools:context=".Layout1">
 
 
-
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="321dp"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:hint="@string/select"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        android:hint="@string/select">
 
         <AutoCompleteTextView
 
             android:id="@+id/auto_complete_txt"
             android:layout_width="321dp"
             android:layout_height="56dp"
-            android:inputType="none" />
+            android:inputType="none"
+            android:textColor="#000000"
+            android:textColorHint="#000000" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:backgroundTint="#E91E63">
 
         <ImageButton
             android:id="@+id/imgbtn"
@@ -35,10 +38,29 @@
             android:background="@drawable/webimg"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.485"
+            app:layout_constraintHorizontal_bias="0.457"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.155" />
+            app:layout_constraintVertical_bias="0.125" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="41dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="328dp"
+            android:layout_weight="1"
+            android:background="@drawable/user"
+            android:cropToPadding="true"
+            android:paddingLeft="1200dp"
+            android:paddingTop="1200dp"
+            android:paddingRight="1200dp"
+            android:paddingBottom="1200dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.547"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.03" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
