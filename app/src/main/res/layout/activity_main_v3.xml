@@ -13,7 +13,8 @@
         android:orientation="vertical"
         android:background="@color/design_default_color_primary"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
@@ -29,6 +30,7 @@
                 android:fontFamily="sans-serif-smallcaps"
                 android:lineSpacingExtra="8sp"
                 android:paddingHorizontal="@dimen/fab_margin"
+                android:paddingTop="30sp"
                 android:text="PomenSOT App"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="@color/white"
@@ -38,11 +40,16 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_marginTop="5sp"
+                android:layout_marginRight="20sp"
+                android:layout_marginBottom="10sp"
                 android:layout_weight="4"
                 android:backgroundTint="@color/white"
+                android:paddingTop="30sp"
                 android:scaleType="centerInside"
-                android:src="@drawable/profile"
-                tools:src="@drawable/profile" />
+                android:src="@drawable/user"
+                tools:src="@drawable/user" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <Spinner
