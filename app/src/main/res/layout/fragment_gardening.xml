@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="Gardening Fragment"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="44sp" />
 
 </FrameLayout>
