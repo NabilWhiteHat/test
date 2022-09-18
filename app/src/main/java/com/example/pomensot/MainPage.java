@@ -1,7 +1,6 @@
 package com.example.pomensot;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -15,14 +14,12 @@ import androidx.fragment.app.FragmentContainerView;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.pomensot.ui.main.aboutFragment;
 import com.example.pomensot.ui.main.CarServiceFragment;
 import com.example.pomensot.ui.main.ConstructionFragment;
 import com.example.pomensot.ui.main.ElectricalFragment;
 import com.example.pomensot.ui.main.GardeningFragment;
 import com.example.pomensot.ui.main.PipingFragment;
-import com.example.pomensot.ui.main.PlaceholderFragment;
-
-import java.util.concurrent.ConcurrentHashMap;
 
 public class MainPage extends AppCompatActivity implements
         AdapterView.OnItemSelectedListener {
@@ -57,7 +54,7 @@ public class MainPage extends AppCompatActivity implements
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        Toast.makeText(getApplicationContext(),tabs[0] , Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(),tabs[1] , Toast.LENGTH_LONG).show();
         openFragment(i);
     }
 
