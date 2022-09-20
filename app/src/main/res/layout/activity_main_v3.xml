@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,7 +9,7 @@
     <!--"top bar layout"-->
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/top_bar"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/design_default_color_primary"
         android:orientation="vertical"
@@ -37,6 +37,7 @@
                 android:textStyle="bold" />
 
             <ImageButton
+                android:id="@+id/profile_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20sp"
@@ -62,29 +63,11 @@
             android:background="@color/white"
             tools:ignore="SpeakableTextPresentCheck" />
     </androidx.appcompat.widget.LinearLayoutCompat>
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/nestedScrollView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_toEndOf="@id/top_bar"
-        android:orientation="vertical">
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="fill_parent"
-            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck">
-
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragmentContainer"
                 android:name="com.example.pomensot.ui.main.ElectricalFragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="80dp" />
-
-        </ScrollView>
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-
+                android:layout_marginTop="80dp"
+                tools:layout="@layout/fragment_gardening"/>
 </androidx.appcompat.widget.LinearLayoutCompat>

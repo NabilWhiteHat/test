@@ -10,7 +10,10 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.example.pomensot.CustomAdapter;
+import com.example.pomensot.MainPage;
 import com.example.pomensot.R;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -21,7 +24,8 @@ public class CarServiceFragment extends Fragment {
 
     public View view;
     ListView simpleList;
-    String countryList[] = {"Elshaikh", "Nabil", "AbdulRahman", "Aisyah", "Ang", "NewZealand"};
+    private ArrayList<Pomen> Pomen_list;
+    //String countryList[] = {"Elshaikh", "Nabil", "AbdulRahman", "Aisyah", "Ang", "NewZealand"};
     int flags[] = {R.drawable.user, R.drawable.profile, R.drawable.user, R.drawable.profile, R.drawable.user, R.drawable.profile};
 
     public CarServiceFragment() {
@@ -48,8 +52,9 @@ public class CarServiceFragment extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_car_service, container, false);
         simpleList = view.findViewById(R.id.simpleListView);
-        CustomAdapter customAdapter = new CustomAdapter(getContext().getApplicationContext(), countryList, flags);
+        CustomAdapter customAdapter = new CustomAdapter(getContext().getApplicationContext(), MainPage.getPomen_list());
         simpleList.setAdapter(customAdapter);
         return view;//inflater.inflate(R.layout.fragment_electrical, container, false);
     }
+
 }

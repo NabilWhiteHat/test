@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.example.pomensot.CustomAdapter;
+import com.example.pomensot.MainPage;
 import com.example.pomensot.R;
 
 /**
@@ -58,7 +59,7 @@ public class ElectricalFragment extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_electrical, container, false);
         simpleList = view.findViewById(R.id.simpleListView);
-        CustomAdapter customAdapter = new CustomAdapter(getContext().getApplicationContext(), countryList, flags);
+        CustomAdapter customAdapter = new CustomAdapter(getContext().getApplicationContext(), MainPage.getPomen_list());
         simpleList.setAdapter(customAdapter);
         return view;//inflater.inflate(R.layout.fragment_electrical, container, false);
     }

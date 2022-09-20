@@ -62,7 +62,7 @@ public class Layout1 extends AppCompatActivity {
         // part for dropdown item
         autoCompleteTxt = findViewById(id.auto_complete_txt);
 
-        adapterItems = new ArrayAdapter<String>(this,R.layout.list_item,items);
+        adapterItems = new ArrayAdapter<String>(this,R.layout.pomen_listview,items);
 
         autoCompleteTxt.setAdapter(adapterItems);
 

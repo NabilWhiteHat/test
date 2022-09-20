@@ -14,6 +14,7 @@ import androidx.fragment.app.FragmentContainerView;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.pomensot.ui.main.Pomen;
 import com.example.pomensot.ui.main.aboutFragment;
 import com.example.pomensot.ui.main.CarServiceFragment;
 import com.example.pomensot.ui.main.ConstructionFragment;
@@ -21,9 +22,11 @@ import com.example.pomensot.ui.main.ElectricalFragment;
 import com.example.pomensot.ui.main.GardeningFragment;
 import com.example.pomensot.ui.main.PipingFragment;
 
+import java.util.ArrayList;
+
 public class MainPage extends AppCompatActivity implements
         AdapterView.OnItemSelectedListener {
-    protected FragmentContainerView current_fragment_view;
+    public FragmentContainerView current_fragment_view;
     String[] tabs = {"Electrical",
             "Piping",
             "Car Service",
@@ -54,13 +57,12 @@ public class MainPage extends AppCompatActivity implements
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        Toast.makeText(getApplicationContext(),tabs[1] , Toast.LENGTH_LONG).show();
         openFragment(i);
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> arg0) {
-        // TODO Auto-generated method stub
+        openFragment(0);
     }
 
     private void openFragment(int index) {
@@ -83,5 +85,36 @@ public class MainPage extends AppCompatActivity implements
             default: current_f = ElectricalFragment.newInstance();
         }
         return current_f;
+    }
+    public static final ArrayList<Pomen> getPomen_list()
+    {
+        ArrayList<Pomen> dataSet = new ArrayList<Pomen>();
+        Pomen aa = new Pomen("Mohamed","Computer Engineer");
+        dataSet.add(aa);
+
+        Pomen bb = new Pomen("Abdul","Computer Security Engineer");
+        dataSet.add(bb);
+
+        Pomen cc = new Pomen("Aisyah","Computer FrontEnd Designer");
+        dataSet.add(cc);
+
+        Pomen dd = new Pomen("Ang","Computer Hardware Engineer");
+        dataSet.add(dd);
+
+        Pomen ee = new Pomen("Nabil","Computer Backend Developer");
+        dataSet.add(ee);
+
+        Pomen xx = new Pomen("Nabil","Computer Backend Developer");
+        dataSet.add(xx);
+
+        Pomen ees = new Pomen("Nabil","Computer Backend Developer");
+        dataSet.add(ees);
+
+        Pomen ww = new Pomen("Nabil","Computer Backend Developer");
+        dataSet.add(ww);
+
+        Pomen ff = new Pomen("AAAA Nabil","Computer Backend Developer");
+        dataSet.add(ff);
+        return dataSet;
     }
 }
