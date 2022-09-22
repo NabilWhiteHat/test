@@ -63,11 +63,12 @@
             android:background="@color/white"
             tools:ignore="SpeakableTextPresentCheck" />
     </androidx.appcompat.widget.LinearLayoutCompat>
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/fragmentContainer"
-                android:name="com.example.pomensot.ui.main.ElectricalFragment"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="80dp"
-                tools:layout="@layout/fragment_gardening"/>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainer"
+        android:name="com.example.pomensot.ui.main.ElectricalFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="2dp"
+        tools:layout="@layout/fragment_gardening" />
 </androidx.appcompat.widget.LinearLayoutCompat>
