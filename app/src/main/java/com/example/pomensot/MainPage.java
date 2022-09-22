@@ -15,6 +15,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.pomensot.ui.main.Pomen;
+import com.example.pomensot.ui.main.WelcomeFragment;
 import com.example.pomensot.ui.main.aboutFragment;
 import com.example.pomensot.ui.main.CarServiceFragment;
 import com.example.pomensot.ui.main.ConstructionFragment;
@@ -27,7 +28,7 @@ import java.util.ArrayList;
 public class MainPage extends AppCompatActivity implements
         AdapterView.OnItemSelectedListener {
     public FragmentContainerView current_fragment_view;
-    String[] tabs = {"Electrical",
+    String[] tabs = {"Home","Electrical",
             "Piping",
             "Car Service",
             "Construction",
@@ -38,7 +39,7 @@ public class MainPage extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_v3);
         current_fragment_view = findViewById(R.id.fragmentContainer);
-        openFragment(0);
+        openFragment(110);
 
         Spinner spin = findViewById(R.id.spinner1);
         spin.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
@@ -62,7 +63,7 @@ public class MainPage extends AppCompatActivity implements
 
     @Override
     public void onNothingSelected(AdapterView<?> arg0) {
-        openFragment(0);
+        openFragment(110);
     }
 
     private void openFragment(int index) {
@@ -77,12 +78,13 @@ public class MainPage extends AppCompatActivity implements
     {
         Fragment current_f;
         switch (index){
-            case 0: current_f = ElectricalFragment.newInstance(); break;
-            case 1: current_f = GardeningFragment.newInstance(); break;
-            case 2: current_f = ConstructionFragment.newInstance(); break;
-            case 3: current_f = PipingFragment.newInstance(); break;
-            case 4: current_f = CarServiceFragment.newInstance(); break;
-            default: current_f = ElectricalFragment.newInstance();
+            case 0: current_f = WelcomeFragment.newInstance(); break;
+            case 1: current_f = ElectricalFragment.newInstance(); break;
+            case 2: current_f = GardeningFragment.newInstance(); break;
+            case 3: current_f = ConstructionFragment.newInstance(); break;
+            case 4: current_f = PipingFragment.newInstance(); break;
+            case 5: current_f = CarServiceFragment.newInstance(); break;
+            default: current_f = WelcomeFragment.newInstance();
         }
         return current_f;
     }
