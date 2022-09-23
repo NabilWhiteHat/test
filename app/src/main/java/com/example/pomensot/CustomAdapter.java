@@ -1,6 +1,8 @@
 package com.example.pomensot;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,9 +14,13 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+//import com.bumptech.glide.Glide;
 import com.example.pomensot.ui.main.Pomen;
 import com.google.android.material.snackbar.Snackbar;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.zip.Inflater;
 
@@ -49,7 +55,21 @@ public class CustomAdapter extends ArrayAdapter<Pomen> {
         ImageView icon = (ImageView) view.findViewById(R.id.icon);
         pomen_name.setText(dataSet.get(i).getName());
         pomen_describtion.setText(dataSet.get(i).getDescription());
-        icon.setImageResource(R.drawable.profile);
+        //icon.setImageResource(R.drawable.profile);
+
+        String pomen_image = Links.url_Pomen_image+dataSet.get(i).image;
+        System.out.println("SASASASASASA ccccc"+pomen_image);
+        /*Glide.with(context)
+                .load(pomen_image)
+                .override(300, 200)
+                .into(icon);*/
+        //Glide.with(view.getContext())
+               // .load(pomen_image)
+               // .centerCrop()
+                //.into(icon);
+        //Picasso.get().load(pomen_image).into(icon);
+
+        //Picasso.get().load(pomen_image).into(icon);
         return view;
     }
 }
