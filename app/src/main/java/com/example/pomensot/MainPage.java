@@ -27,6 +27,10 @@ import java.util.ArrayList;
 
 public class MainPage extends AppCompatActivity implements
         AdapterView.OnItemSelectedListener {
+    String url = "http://pomen.atwebpages.com/api/getPomens.php?app_id=1";
+    public HttpGetRequest http_requester;
+    public String json_return;
+    String myurl = "http://pomen.atwebpages.com/api/getPomens.php?app_id=1";
     public FragmentContainerView current_fragment_view;
     String[] tabs = {"Home","Electrical",
             "Piping",
@@ -38,19 +42,23 @@ public class MainPage extends AppCompatActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_v3);
+        http_requester = new HttpGetRequest();
+        http_requester.execute(myurl);
+        json_return = http_requester.Result_String;
+        //Run the first fragment
         current_fragment_view = findViewById(R.id.fragmentContainer);
         openFragment(110);
-
+        //Display the drop down list
         Spinner spin = findViewById(R.id.spinner1);
         spin.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
-
-
-
-        //Creating the ArrayAdapter instance having the country list
+        //Change in dropdown list selection
+            //Creating the ArrayAdapter instance having the country list
         ArrayAdapter aa = new ArrayAdapter(this,android.R.layout.simple_spinner_item,tabs);
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        //Setting the ArrayAdapter data on the Spinner
         spin.setAdapter(aa);
+
+
+        //rr.setText(http_requester.Result_String);
 
 
     }
@@ -67,9 +75,15 @@ public class MainPage extends AppCompatActivity implements
     }
 
     private void openFragment(int index) {
+        Bundle b = new Bundle();
+        b.putString("message", json_return);
+
+        //fragmentTransaction.add(R.id.frameLayout, myFragment).commit();
+
         FragmentManager fragmentManager =  getSupportFragmentManager();
         FragmentTransaction fragmentTransaction =  fragmentManager.beginTransaction();
         Fragment current_fragment = getCurrentFragment(index);
+        current_fragment.setArguments(b);
         fragmentTransaction.replace(R.id.fragmentContainer, current_fragment);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();

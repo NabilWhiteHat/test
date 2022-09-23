@@ -19,7 +19,8 @@
             android:layout_width="match_parent"
             android:layout_height="80sp"
             android:layout_weight="1"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:visibility="visible">
 
             <TextView
                 android:layout_width="match_parent"
@@ -66,7 +67,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainer"
-        android:name="com.example.pomensot.ui.main.ElectricalFragment"
+        android:name="com.example.pomensot.ui.main.WelcomeFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="2dp"

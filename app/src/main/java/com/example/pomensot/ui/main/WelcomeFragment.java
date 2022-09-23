@@ -11,6 +11,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import com.example.pomensot.Links;
 import com.example.pomensot.R;
 
 /**
@@ -51,7 +52,7 @@ public class WelcomeFragment extends Fragment {
         View v=inflater.inflate(R.layout.fragment_welcome, container, false);
 
         frontPage = (WebView) v.findViewById(R.id.frontww);
-        frontPage.loadUrl("http://pomen.atwebpages.com/pomenapp/index.php");
+        frontPage.loadUrl(Links.url_OpeningFragmentWebPage);
 
         // Enable Javascript
         WebSettings webSettings = frontPage.getSettings();
